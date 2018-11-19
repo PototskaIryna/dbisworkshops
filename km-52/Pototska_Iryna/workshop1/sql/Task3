@@ -1,0 +1,4 @@
+DELETE FROM "USER"
+where (select rule_id_fk from "USER" join "USER_RULE" on "USER".user_email="USER_RULE".user_email_fk
+join "RULE" on "USER_RULE".user_email_fk="RULE".rule_id
+where rule_id_fk is NULL);
