@@ -1,0 +1,5 @@
+Select clothes_id FROM 
+"USER" join "USER_RULE" ON "USER".user_email="USER_RULE".user_email_fk
+join "RULE" on "USER_RULE".rule_id_fk="RULE".rule_id
+join "CLOTHES" ON "CLOTHES".rule_id_fk="RULE".rule_id
+where "USER".user_email='1111@gmail.com';
